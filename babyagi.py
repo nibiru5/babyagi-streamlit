@@ -147,24 +147,28 @@ class BabyAGI(BaseModel):
 
     def print_task_list(self):
         with Message(label="Task List") as m:
-            m.write("## Task List")
+            m.write("### Task List")
             for t in self.task_list:
                 m.write("- " + str(t["task_id"]) + ": " + t["task_name"])
-                m.write("---")
+                m.write("")
 
     def print_next_task(self, task: Dict):
         with Message(label="Next Task") as m:
-            m.write("## Next Task")
-            m.write(str(task["task_id"]) + ": " + task["task_name"])
+            m.write("### Next Task")
+            m.write("- " + str(task["task_id"]) + ": " + task["task_name"])
+            m.write("")
 
     def print_task_result(self, result: str):
         with Message(label="Task Result") as m:
-            m.write("## Task Result")
+            m.write("### Task Result")
             m.write(result)
+            m.write("")
 
     def print_task_ending(self):
         with Message(label="Task Ending") as m:
-            m.write("## Task Ending")
+            m.write("### Task Ending")
+            m.write("")
+
 
     def run(self, max_iterations: Optional[int] = None):
         """Run the agent."""
@@ -249,7 +253,7 @@ def main():
 
     st.title("BabyAGI Streamlit")
     objective = st.text_input("Input Ultimate goal", "Solve world hunger")
-    first_task = st.text_input("Input Where to start", "Where to start")
+    first_task = st.text_input("Input Where to start", "Develop a task list")
     max_iterations = st.number_input("Max iterations", value=3, min_value=1, step=1)
     button = st.button("Run")
 
