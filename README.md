@@ -20,7 +20,6 @@ poetry run streamlit run babyagi.py
 You can now view your Streamlit app in your browser.
 
 Local URL: http://localhost:8501
-Network URL: http://xxx.xxx.xxx.xxx:8501
 
 To stop the Streamlit server, press ctrl-C.
 
@@ -31,6 +30,7 @@ I would like to express my gratitude to the developers whose code I referenced i
 Special thanks go to 
 
 @yoheinakajima (https://github.com/yoheinakajima/babyagi)
+
 @hinthornw (https://github.com/hwchase17/langchain/pull/2559)
 
 ---
