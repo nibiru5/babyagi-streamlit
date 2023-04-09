@@ -5,12 +5,10 @@
 
 # Installation
 
-1. Install the required packages:
+Install the required packages:
 ````
 poetry install
 ````
-
-2. Copy the .env.example file to .env: `cp .env.example .env`. This is where you will set the following variables.
 
 # Usage
 
@@ -29,8 +27,11 @@ To stop the Streamlit server, press ctrl-C.
 # Acknowledgments
 
 I would like to express my gratitude to the developers whose code I referenced in creating this repo.
+
 Special thanks go to 
+
 @yoheinakajima (https://github.com/yoheinakajima/babyagi)
 @hinthornw (https://github.com/hwchase17/langchain/pull/2559)
 
+---
 Roboto Logo Icon by Icons Mind(https://iconscout.com/contributors/icons-mind) on IconScout(https://iconscout.com)
