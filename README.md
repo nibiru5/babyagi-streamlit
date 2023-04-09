@@ -16,7 +16,7 @@ poetry install
 
 Run streamlit.
 ````
-poetry run streamlit run app/main.py 
+poetry run streamlit run babyagi.py 
 ````
 
 You can now view your Streamlit app in your browser.
