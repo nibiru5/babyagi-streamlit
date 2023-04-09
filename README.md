@@ -32,3 +32,5 @@ I would like to express my gratitude to the developers whose code I referenced i
 Special thanks go to 
 @yoheinakajima (https://github.com/yoheinakajima/babyagi)
 @hinthornw (https://github.com/hwchase17/langchain/pull/2559)
+
+Roboto Logo Icon by Icons Mind(https://iconscout.com/contributors/icons-mind) on IconScout(https://iconscout.com)
