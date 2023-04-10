@@ -11,5 +11,4 @@ venv/
 .vscode/
 .idea/
 
-models
-llama/
+*.lock
