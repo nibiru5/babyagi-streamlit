@@ -1,5 +1,4 @@
 from collections import deque
-import openai
 from typing import Dict, List, Optional
 from langchain import LLMChain, OpenAI, PromptTemplate
 from langchain.embeddings import HuggingFaceEmbeddings
@@ -249,11 +248,8 @@ def main():
         layout="centered",
     )
 
-    # with st.sidebar:
-        # openai_api_key = st.text_input('Your OpenAI API KEY', type="password")
-    # openai_api_key = 'OPENAI_API_KEY'
-    # API_KEY = 'OPENAI_API_KEY'
-    # openai_api_key = API_KEY
+    with st.sidebar:
+        openai_api_key = st.text_input(st.secrets["OPENAI_API_KEY"], type="password")
 
     st.title("BabyAGI Streamlit")
     objective = st.text_input("Input Ultimate goal", "Solve world hunger")
@@ -267,7 +263,7 @@ def main():
     if button:
         try:
             baby_agi = BabyAGI.from_llm_and_objectives(
-                llm=OpenAI(st.secrets["OPENAI_API_KEY"]),
+                llm=OpenAI(openai_api_key=openai_api_key),
                 vectorstore=vectorstore,
                 objective=objective,
                 first_task=first_task,
