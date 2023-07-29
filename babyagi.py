@@ -248,8 +248,8 @@ def main():
         layout="centered",
     )
 
-    with st.sidebar:
-        openai_api_key = st.text_input('Your OpenAI API KEY', type="password")
+    # with st.sidebar:
+        # openai_api_key = st.text_input('Your OpenAI API KEY', type="password")
 
     st.title("BabyAGI Streamlit")
     objective = st.text_input("Input Ultimate goal", "Solve world hunger")
