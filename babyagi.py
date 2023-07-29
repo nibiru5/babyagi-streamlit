@@ -252,8 +252,8 @@ def main():
     # with st.sidebar:
         # openai_api_key = st.text_input('Your OpenAI API KEY', type="password")
     # openai_api_key = 'OPENAI_API_KEY'
-    API_KEY = 'OPENAI_API_KEY'
-    openai_api_key = API_KEY
+    # API_KEY = 'OPENAI_API_KEY'
+    # openai_api_key = API_KEY
 
     st.title("BabyAGI Streamlit")
     objective = st.text_input("Input Ultimate goal", "Solve world hunger")
@@ -265,6 +265,7 @@ def main():
     vectorstore = FAISS.from_texts(["_"], embedding_model, metadatas=[{"task":first_task}])
 
     if button:
+    openai_api_key = "OPENAI_API_KEY"
         try:
             baby_agi = BabyAGI.from_llm_and_objectives(
                 llm=OpenAI(openai_api_key=openai_api_key),
