@@ -249,8 +249,6 @@ def main():
         layout="centered",
     )
 
-    openai.api_key = "OPENAI_API_KEY"
-
     # with st.sidebar:
         # openai_api_key = st.text_input('Your OpenAI API KEY', type="password")
     # openai_api_key = 'OPENAI_API_KEY'
@@ -269,7 +267,7 @@ def main():
     if button:
         try:
             baby_agi = BabyAGI.from_llm_and_objectives(
-                llm=OpenAI(openai.api_key),
+                llm=OpenAI(st.secrets["OPENAI_API_KEY"]),
                 vectorstore=vectorstore,
                 objective=objective,
                 first_task=first_task,
