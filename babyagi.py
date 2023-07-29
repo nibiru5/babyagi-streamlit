@@ -250,6 +250,7 @@ def main():
 
     # with st.sidebar:
         # openai_api_key = st.text_input('Your OpenAI API KEY', type="password")
+    openai_api_key = config('OPENAI_API_KEY')
 
     st.title("BabyAGI Streamlit")
     objective = st.text_input("Input Ultimate goal", "Solve world hunger")
