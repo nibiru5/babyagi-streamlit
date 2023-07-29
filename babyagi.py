@@ -265,7 +265,7 @@ def main():
     vectorstore = FAISS.from_texts(["_"], embedding_model, metadatas=[{"task":first_task}])
 
     if button:
-    openai_api_key = "OPENAI_API_KEY"
+        openai_api_key = "OPENAI_API_KEY"
         try:
             baby_agi = BabyAGI.from_llm_and_objectives(
                 llm=OpenAI(openai_api_key=openai_api_key),
