@@ -113,11 +113,11 @@ class ExecutionChain(LLMChain):
 
 class Message:
     exp: st.expander
-    ai_icon = "./img/robot.png"
+    # ai_icon = "./img/robot.png"
 
     def __init__(self, label: str):
         message_area, icon_area = st.columns([10, 1])
-        icon_area.image(self.ai_icon, caption="BabyAGI")
+        # icon_area.image(self.ai_icon, caption="BabyAGI")
 
         # Expander
         self.exp = message_area.expander(label=label, expanded=True)
