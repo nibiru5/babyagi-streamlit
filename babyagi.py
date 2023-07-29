@@ -249,6 +249,8 @@ def main():
         layout="centered",
     )
 
+    openai.api_key = "OPENAI_API_KEY"
+
     # with st.sidebar:
         # openai_api_key = st.text_input('Your OpenAI API KEY', type="password")
     # openai_api_key = 'OPENAI_API_KEY'
@@ -265,10 +267,9 @@ def main():
     vectorstore = FAISS.from_texts(["_"], embedding_model, metadatas=[{"task":first_task}])
 
     if button:
-        openai_api_key = "OPENAI_API_KEY"
         try:
             baby_agi = BabyAGI.from_llm_and_objectives(
-                llm=OpenAI(openai_api_key=openai_api_key),
+                llm=OpenAI(openai.api_key),
                 vectorstore=vectorstore,
                 objective=objective,
                 first_task=first_task,
