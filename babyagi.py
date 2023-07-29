@@ -11,7 +11,7 @@ import streamlit as st
 class TaskCreationChain(LLMChain):
     @classmethod
     def from_llm(cls, llm: BaseLLM, objective: str, verbose: bool = True) -> LLMChain:
-        """Get the response parser."""
+        """Get the response parser.""" 
         task_creation_template = (
             "You are an task creation AI that uses the result of an execution agent"
             " to create new tasks with the following objective: {objective},"
@@ -248,8 +248,7 @@ def main():
         layout="centered",
     )
 
-    with st.sidebar:
-        openai_api_key = st.text_input(st.secrets["OPENAI_API_KEY"], type="password")
+    openai_api_key = st.secrets["OPENAI_API_KEY"]
 
     st.title("BabyAGI Streamlit")
     objective = st.text_input("Input Ultimate goal", "Solve world hunger")
