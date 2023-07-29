@@ -7,7 +7,6 @@ from langchain.vectorstores import FAISS
 from langchain.vectorstores.base import VectorStore
 from pydantic import BaseModel, Field
 import streamlit as st
-from decouple import config
 
 class TaskCreationChain(LLMChain):
     @classmethod
